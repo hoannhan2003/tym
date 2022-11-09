@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.bg {
+				background-image: url(./final-starfield.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.webtab {
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			.option-heart+.option-heart {
+				margin-left: 3px;
+			}
+
+			.option-heart {
+				border-color: #f5f8fa !important;
+			}
+			.option-active {
+				border-color: #732ff7 !important;
+			}
+		</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg bg-black h-screen relative">
+			<div class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col">
+				<label for="name" class="text-[#f5f8fa] mb-[10px] font-bold text-[20px]">Your name:</label>
+				<input type="text" name="name" id="name" autocomplete="off" placeholder="Your name" class="input-name outline-none bg-[#f5f8fa] text-[#5e6278] rounded-[3px] py-2 px-3 w-[360px] font-[500]">
+				<div class="my-3 flex items-center justify-center w-[360px]">
+					<div data-option="pink" class="option-heart flex-grow-1 rounded-[5px] border border-transparent  webtab overflow-hidden cursor-pointer w-[178px] h-[157px]">
+						<img src="./heart-pink.png" width="100%" alt="">
+					</div>
+					<div data-option="red" class="option-heart flex-grow-1 rounded-[5px] border border-transparent  webtab overflow-hidden cursor-pointer  w-[178px] h-[157px]">
+						<img src="./heart-red.png" width="100%" alt="">
+					</div>
+				</div>
+				<button type="button" id="btn" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Start</button>
+			</div>
+
+    </div>
+		<a href="" class="href hidden"></a>
+    <script src="./main.js"></script>
+</body>
+</html>
